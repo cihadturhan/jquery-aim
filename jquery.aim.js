@@ -82,7 +82,6 @@
 
     function intersectsRects(rect, rect2) {
 
-
         var x_overlap = Math.max(0, Math.min(rect.x1, rect2.x1) - Math.max(rect.x0, rect2.x0));
         var y_overlap = Math.max(0, Math.min(rect.y1, rect2.y1) - Math.max(rect.y0, rect2.y0));
 
@@ -147,10 +146,13 @@
         //console.log(v.y);
         DEBUG && trailblazer.css({
             '-webkit-transform': 'translate(' + tbCenter.x + 'px,' + tbCenter.y + 'px) scale(' + tbRad / tbRadius + ')',
+            '-moz-transform': 'translate(' + tbCenter.x + 'px,' + tbCenter.y + 'px) scale(' + tbRad / tbRadius + ')',
+            '-ms-transform': 'translate(' + tbCenter.x + 'px,' + tbCenter.y + 'px) scale(' + tbRad / tbRadius + ')',
+            'transform': 'translate(' + tbCenter.x + 'px,' + tbCenter.y + 'px) scale(' + tbRad / tbRadius + ')'
             /*width: tbRad * 2,
-            height: tbRad * 2,
-            marginLeft: -tbRad + 'px',
-            marginTop: -tbRad + 'px'*/
+             height: tbRad * 2,
+             marginLeft: -tbRad + 'px',
+             marginTop: -tbRad + 'px'*/
         });
         for (var i = 0; i < elementList.length; i++) {
 
@@ -163,7 +165,7 @@
             if (isct && vd !== 0) {
                 data.hover = data.hover + isct * 0.2;
                 // target.html(data.hover.toFixed(2));
-                if (data.hover > 1 && data.hover < 1.31) {
+                if (data.hover > 1 && data.hover < 2) {
                     if (data.options.className)
                         target.addClass(data.options.className);
                     else if (data.options.aimEnter && typeof data.options.aimEnter === 'function')

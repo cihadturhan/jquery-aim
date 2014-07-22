@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="../jquery.aim.js"></script>
+    </head>
+    <body>
+        <div id="main_container" class="container full-width"> 
+            <header class="navbar navbar-default"><h1 class="text-center text-info">HEADER EXAMPLE</h1></header>
+            <div class="row">
+                <div class="panel"> <div class="panel-body text-center">Move mouse upwards to see header </div></div>
+            </div>
+        </div>
+
+        <script>
+
+            $().ready(function() {
+                $('header').aim({
+                    className: 'shown'
+                });
+
+                //toggle debug element if needed
+                //$.aimDebug(true)
+
+            });
+        </script>
+    </body>
+</html>
