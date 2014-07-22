@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="js/jquery.aim.js"></script>
+    </head>
+    <body>
+        <div id="main_container" class="container full-width"> 
+            <header class="navbar navbar-default">Header </header>
+            <div class="navbar">
+                <div class="col-xs-offset-2">
+                    <button id="hamburger" class="btn navbar-toggle pull-left" type="button">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2">
+                    <ul id="menu" class="nav">
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#">Newsfeed</a></li>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Videos</a></li>
+                        <li><a href="#">Music</a></li>
+                        <li><a href="#">Settings</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-8">
+                    <div class="row">
+                        <div class="col-xs-2 col-xs-offset-5">
+                            <div id="target1" class="btn-group text-center">
+                                <button id="btnGroupDrop1" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    Operations
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupDrop1">
+                                    <li><a href="#">Rename</a></li>
+                                    <li><a href="#">Add</a></li>
+                                    <li><a href="#">Copy</a></li>
+                                    <li><a href="#">Delete</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row buffer-top">
+                        <div class="panel panel-primary">
+                            <div class="panel-body">
+                                <p> You can use this plugin with popovers too </p>
+
+                                <button type="button" class="popovers btn btn-default pull-right" data-container="body" data-animation="false" data-delay="0" data-toggle="popover" data-placement="right" data-content="Hello there! Does it work properly?">
+                                    Try it on a popup!
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+            function drawCircles(d) {
+                if (d) {
+                    $('.radius, #route').show();
+                } else {
+                    $('.radius, #route').hide();
+                }
+            }
+
+
+            $().ready(function() {
+                $('header').aim({
+                     className: 'shown'
+                });
+                
+                $('#hamburger').aim({
+                    aimEnter: function() {
+                        $('#menu').show();
+                    }, aimExit:function(){
+                        $('#menu').hide();
+                    }
+                });
+                
+                $('#target1').aim({
+                    className: 'open'
+                });
+
+                $('.popovers').aim({
+                    aimEnter: function() {
+                        this.popover('show');
+                    },
+                    aimExit: function() {
+                        this.popover('hide');
+                    }
+                });
+
+                //$.aimDebug(true)
+
+            });
+        </script>
+    </body>
+</html>

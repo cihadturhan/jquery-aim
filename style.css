@@ -1,0 +1,32 @@
+.full-width{
+    width: 100% !important;
+}
+
+.buffer-top{
+    margin-top: 15px;
+}
+
+.navbar-toggle .icon-bar{
+    background-color: dodgerblue
+}
+
+.navbar-toggle{
+    display: block !important;
+}
+
+#menu{
+    display: none;
+}
+
+header{
+    position: fixed !important;
+    top: 0;
+    left:0;
+    width: 100%;
+    -webkit-transform: translateY(-60px);
+    -webkit-transition: transform 0.3s;
+}
+
+header.shown{
+    -webkit-transform: translateY(0px);
+}
