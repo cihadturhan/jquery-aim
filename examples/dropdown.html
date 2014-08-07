@@ -11,12 +11,26 @@
         <div id="main_container" class="container full-width"> 
             <div class="navbar"></div>
             <div class="row">
-                <div class="col-xs-8 col-xs-offset-2">
+
+                <div class="col-xs-offset-2 col-xs-8">
+
+                    <div class="row buffer-top">
+                        <div class="panel panel-primary">
+                            <div class="panel-body text-center">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" onclick="  $.aim.setDebug($(this).prop('checked'))"> Toggle debug mode
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="row">
-                        <div class="col-xs-2 col-xs-offset-5">
+                        <div class="col-xs-2 col-xs-offset-2">
                             <div id="target1" class="btn-group text-center">
                                 <button id="btnGroupDrop1" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                    Operations
+                                    Self Closing
                                     <span class="caret"></span>
                                 </button>
                                 <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupDrop1">
@@ -24,8 +38,24 @@
                                     <li><a href="#">Add</a></li>
                                     <li><a href="#">Copy</a></li>
                                     <li><a href="#">Delete</a></li>
+                                    <li><a href="#">More</a></li>
                                 </ul>
                             </div>
+                        </div>
+                        <div class="col-xs-2 col-xs-offset-5">
+                            <div id="target2" class="btn-group text-center">
+                                <button id="btnGroupDrop2" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    Stays Open
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupDrop1">
+                                    <li><a href="#">Rename</a></li>
+                                    <li><a href="#">Add</a></li>
+                                    <li><a href="#">Copy</a></li>
+                                    <li><a href="#">More</a></li>
+                                </ul>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -40,6 +70,12 @@
             $().ready(function() {
                 $('#target1').aim({
                     className: 'open'
+                });
+
+                $('#target2').aim({
+                    aimEnter: function() {
+                        $(this).addClass('open');
+                    }
                 });
             });
         </script>

@@ -35,7 +35,11 @@
                     <div class="row buffer-top">
                         <div class="panel panel-primary">
                             <div class="panel-body text-center">
-                                Website content here
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" onclick="$.aim.setDebug($(this).prop('checked'))"> Toggle debug mode
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -51,13 +55,10 @@
                 $('#hamburger').aim({
                     aimEnter: function() {
                         $('#menu').show();
-                    }, aimExit:function(){
+                    }, aimExit: function() {
                         $('#menu').hide();
                     }
                 });
-                
-                //$.aimDebug(true)
-
             });
         </script>
     </body>

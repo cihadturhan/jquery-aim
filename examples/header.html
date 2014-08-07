@@ -12,6 +12,15 @@
             <header class="navbar navbar-default"><h1 class="text-center text-info">HEADER EXAMPLE</h1></header>
             <div class="row">
                 <div class="panel"> <div class="panel-body text-center">Move mouse upwards to see header </div></div>
+                <div class="panel panel-primary">
+                    <div class="panel-body text-center">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" onclick="  $.aim.setDebug($(this).prop('checked'))"> Toggle debug mode
+                            </label>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -24,9 +33,6 @@
                 $('header').aim({
                     className: 'shown'
                 });
-
-                //toggle debug element if needed
-                //$.aimDebug(true)
 
             });
         </script>
