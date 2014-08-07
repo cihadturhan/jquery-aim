@@ -1,0 +1,31 @@
+{
+  "name": "jquery-aim",
+  "version": "0.0.0",
+  "description": "A jQuery plugin to make webistes more usable by guessing which element is going to be hovered/clicked",
+  "main": "jquery.aim.js",
+  "directories": {
+    "example": "examples"
+  },
+  "dependencies": {
+    "grunt": "~0.4.5"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-uglify": "~0.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cihadturhan/jquery-aim.git"
+  },
+  "keywords": [
+    "jquery-aim"
+  ],
+  "author": "Cihad Turhan",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/cihadturhan/jquery-aim/issues"
+  }
+}
