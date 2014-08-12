@@ -25,8 +25,11 @@ header{
     width: 100%;
     -webkit-transform: translateY(-60px);
     -webkit-transition: transform 0.3s;
+    transform: translateY(-60px);
+    transition: transform 0.3s;
 }
 
 header.shown{
-    -webkit-transform: translateY(0px);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
 }
