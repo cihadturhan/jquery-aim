@@ -15,18 +15,17 @@
 
     var v = {x: 0, y: 0},
     vd = 0,
-            p = {x: 0, y: 0},
+    p = {x: 0, y: 0},
     t = 12,
-            mouseX = 0,
-            mouseY = 0,
-            DEBUG = false,
-            anticipator = {
-                size: 50,
-                center: {x: 0, y: 0},
-                effectiveSize: 1
-            };
+    mouseX = 0,
+    mouseY = 0,
+    DEBUG = false,
+    anticipator = {
+        size: 50,
+        center: {x: 0, y: 0},
+        effectiveSize: 1
+    };
     anticipator.rect = {x0: 0, y0: 0, x1: anticipator.size, y1: anticipator.size};
-
 
     /*
      * Default anticipate function 
@@ -160,10 +159,10 @@
                     id: 'jquery-aim-debug'
                 })
                 .css({
-                    width: 2 * s,
-                    height: 2 * s,
-                    'margin-left': -s,
-                    'margin-top': -s,
+                    width: 2 * s + 'px',
+                    height: 2 * s + 'px',
+                    'margin-left': -s + 'px',
+                    'margin-top': -s + 'px',
                     top: 0,
                     left: 0,
                     border: '2px solid #333',
@@ -200,13 +199,12 @@
         elementList.push($this);
         addProperties($this);
         $this.data('aim-data').options = opts;
-
     }
 
     $().ready(function() {
         document.addEventListener('mousemove', function(e) {
-            mouseX = e.x,
-                    mouseY = e.y; //TO-DO: check if pageX, pageY is cross-browser or this one
+            mouseX = e.clientX,
+            mouseY = e.clientY;
         }, false);
     });
 
