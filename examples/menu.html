@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>jQuery Aim Example Menu</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale = 1.0">
         <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="style.css" />
-        <script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-        <script src="../jquery.aim.js"></script>
     </head>
     <body>
         <div id="main_container" class="container full-width"> 
@@ -37,28 +35,30 @@
                     <div class="row buffer-top">
                         <div class="panel panel-primary">
                             <div class="panel-body text-center">
-                                Website content here
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" onclick="$.aim.setDebug($(this).prop('checked'))"> Toggle debug mode
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
 
+        <script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="../jquery.aim.js"></script>
         <script>
             $().ready(function() {
                 $('#hamburger').aim({
                     aimEnter: function() {
                         $('#menu').show();
-                    }, aimExit:function(){
+                    }, aimExit: function() {
                         $('#menu').hide();
                     }
                 });
-                
-                //$.aimDebug(true)
-
             });
         </script>
     </body>
