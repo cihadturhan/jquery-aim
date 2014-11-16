@@ -35,7 +35,7 @@ $('#hamburger').aim({
 ##Debugging
 To see where your cursor is aiming and check if it intersects with elements use
 ```javascript
-$.aim.setDebugMode(true);
+$.aim.setDebug(true);
 ```
 and you will see a rectangle moving around.
 
