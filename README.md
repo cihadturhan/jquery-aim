@@ -5,10 +5,10 @@ jQuery plugin anticipates on which element user is going to hover/click.
 
 ![test](img/demo.gif "lorem")
 
-##Examples
+## Examples
 A couple of examples can be found the [examples page](http://cihadturhan.github.io/jquery-aim/examples/index.html)
 
-##Usage
+## Usage
 Call the function on the elements to catch user aim and add a class which will be added or removed when aiming starts or ends
 ```javascript
 $('#target').aim({
@@ -32,14 +32,14 @@ $('#hamburger').aim({
 ```
 
 
-##Debugging
+## Debugging
 To see where your cursor is aiming and check if it intersects with elements use
 ```javascript
 $.aim.setDebug(true);
 ```
 and you will see a rectangle moving around.
 
-##Defining own function
+## Defining own function
 If you don't like the default algorithm, define your own by the following procedure
 
 ```javascript
